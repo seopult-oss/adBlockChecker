@@ -1,0 +1,14 @@
+{
+  "name": "ad-block-checker",
+  "description": "Module for check AdBlockPlus",
+  "main": "index.html",
+  "authors": [
+    "IVAgafonov"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "AdBlock",
+    "checker"
+  ],
+  "homepage": "-"
+}

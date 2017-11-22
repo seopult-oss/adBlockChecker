@@ -1,0 +1,25 @@
+{
+  "name": "ad-block-checker",
+  "version": "0.0.1",
+  "description": "Module for check AdBlockPlus",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seopult-oss/adBlockChecker.git"
+  },
+  "keywords": [
+    "AdBlock",
+    "checker"
+  ],
+  "author": "IVAgafonov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seopult-oss/adBlockChecker/issues"
+  },
+  "homepage": "https://github.com/seopult-oss/adBlockChecker#readme"
+}
