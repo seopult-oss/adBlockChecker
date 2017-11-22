@@ -1,10 +1,9 @@
 {
-  "name": "ad-block-checker",
+  "name": "seopult-ad-block-checker",
   "version": "0.0.1",
   "description": "Module for check AdBlockPlus",
   "main": "index.html",
   "dependencies": {},
-  "devDependencies": {},
   "scripts": {
     "test": "test"
   },
@@ -21,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/seopult-oss/adBlockChecker/issues"
   },
-  "homepage": "https://github.com/seopult-oss/adBlockChecker#readme"
+  "homepage": "https://github.com/seopult-oss/adBlockChecker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "main-bower-files": "^2.13.1"
+  }
 }

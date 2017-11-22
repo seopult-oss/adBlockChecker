@@ -1,0 +1,20 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.test_wrapper {
+  width: 100%;
+  background: #f7f7f7;
+  height: 100%;
+  min-height: 1000px;
+  display: flex;
+}
+
+.test_container {
+  margin: 0px auto;
+  & h2 {
+    color: #585858;
+    margin: 40px 0px 20px 0px;
+  }
+}

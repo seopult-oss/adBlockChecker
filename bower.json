@@ -1,7 +1,7 @@
 {
-  "name": "ad-block-checker",
+  "name": "seopult-ad-block-checker",
   "description": "Module for check AdBlockPlus",
-  "main": "index.html",
+  "main": "dist/adBlockComponent.js",
   "authors": [
     "IVAgafonov"
   ],
@@ -10,5 +10,9 @@
     "AdBlock",
     "checker"
   ],
-  "homepage": "-"
+  "homepage": "-",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "seopult-add-block-checker": "^4.0.4"
+  }
 }
