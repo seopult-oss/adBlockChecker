@@ -8,7 +8,6 @@
                     var self = this;
                     if (adBlock === undefined) {
                         var adBlock = new $window.FuckAdBlock;
-                        console.log(adBlock);
                         adBlock.onDetected(function () {
                             self.isAdblockEnabledVal = true;
                         });
