@@ -13,7 +13,7 @@ var paths = {
     dist: './dist'
 };
 
-function build() {
+function buildDist() {
     console.log('build start');
 
     console.log('build dist');
@@ -22,9 +22,12 @@ function build() {
         .pipe(plugins.concat('adBlockComponent.js'))
         .pipe(plugins.uglify())
         .pipe(gulp.dest('./dist'));
+}
+
+function build() {
+    console.log('build start');
 
     console.log('build doc');
-
 
     var sourceMaps      = require('gulp-sourcemaps');
 
@@ -56,6 +59,8 @@ function test() {
     console.log('test');
 }
 
-gulp.task('build', build());
+gulp.task('build', build);
 
-gulp.task('test', test());
+gulp.task('buildDist', buildDist);
+
+gulp.task('test', test);
