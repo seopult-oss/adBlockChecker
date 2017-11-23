@@ -4,7 +4,7 @@
         .service('adBlockChecker', ['$window', function ($window) {
             return {
                 isAdblockEnabledVal: false,
-                isAdblockEnabled: function () {
+                check: function () {
                     var self = this;
                     if (adBlock === undefined) {
                         var adBlock = new $window.FuckAdBlock;
