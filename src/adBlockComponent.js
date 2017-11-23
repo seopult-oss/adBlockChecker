@@ -1,19 +1,19 @@
 (function () {
     'use strict';
     angular.module('adBlockModule', [])
-        .service('adBlockChecker', ['$window', function ($window) {
+        .service('adBlockChecker', ['$window', '$timeout', function ($window) {
             return {
                 isAdblockEnabledVal: false,
                 check: function () {
                     var self = this;
                     if (adBlock === undefined) {
                         var adBlock = new $window.FuckAdBlock;
-                        adBlock.onDetected(function () {
+                        adBlock.onDetected($timeout(function () {
                             self.isAdblockEnabledVal = true;
-                        });
-                        adBlock.onNotDetected(function () {
+                        }, 0));
+                        adBlock.onNotDetected($timeout(function () {
                             self.isAdblockEnabledVal = false;
-                        });
+                        }, 0));
                         adBlock.check();
                     } else {
                         adBlock.check();
