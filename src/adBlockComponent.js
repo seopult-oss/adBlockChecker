@@ -8,12 +8,16 @@
                     var self = this;
                     if (adBlock === undefined) {
                         var adBlock = new $window.FuckAdBlock;
-                        adBlock.onDetected($timeout(function () {
-                            self.isAdblockEnabledVal = true;
-                        }, 0));
-                        adBlock.onNotDetected($timeout(function () {
-                            self.isAdblockEnabledVal = false;
-                        }, 0));
+                        adBlock.onDetected(function () {
+                            $timeout(function () {
+                                self.isAdblockEnabledVal = true;
+                            }, 0);
+                        });
+                        adBlock.onNotDetected(function () {
+                            $timeout(function () {
+                                self.isAdblockEnabledVal = false;
+                            }, 0);
+                        });
                         adBlock.check();
                     } else {
                         adBlock.check();
