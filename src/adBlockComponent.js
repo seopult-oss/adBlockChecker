@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('adBlockModule', [])
-        .service('adBlockChecker', ['$window', '$timeout', function ($window) {
+        .service('adBlockChecker', ['$window', '$timeout', function ($window, $timeout) {
             return {
                 isAdblockEnabledVal: false,
                 check: function () {
