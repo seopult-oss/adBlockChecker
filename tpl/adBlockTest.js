@@ -11,6 +11,6 @@
 
         vm.adBlockChecker = adBlockChecker;
 
-        vm.adBlockChecker.check(1000);
+        vm.adBlockChecker.check(10000);
     }
 })();
