@@ -1,10 +1,11 @@
 (function () {
     'use strict';
     angular.module('adBlockModule', [])
-        .service('adBlockChecker', ['$window', '$timeout', function ($window, $timeout) {
+        .service('adBlockChecker', ['$window', '$timeout', '$interval', function ($window, $timeout, $interval) {
             return {
                 isAdblockEnabled: false,
-                check: function () {
+                isCheckerActive: undefined,
+                check: function (delay) {
                     var self = this;
                     if (adBlock === undefined) {
                         var adBlock = new $window.FuckAdBlock;
@@ -23,7 +24,22 @@
                         adBlock.check();
                     }
 
+                    if (delay && self.isCheckerActive == undefined) {
+                        $interval(function () {
+                            self.isCheckerActive = adBlock.check();
+                        }, delay);
+                    }
+
                     return this.isAdblockEnabled;
+                },
+                stop: function () {
+                    var self = this;
+                    if (angular.isDefined(self.isCheckerActive)) {
+                        $interval.cancel(self.isCheckerActive);
+                        self.isCheckerActive= undefined;
+                        return true;
+                    }
+                    return false;
                 }
             }
         }]);
