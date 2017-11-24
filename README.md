@@ -36,8 +36,9 @@ declare instance in controller
 
 after call 
 ```javascript
-    vm.adBlockChecker.check();
+    vm.adBlockChecker.check(delay);
 ```
+if delay > 0 - check will run function check() each delay ms.
 
 adBlock status will be in isAdblockEnabled property
 ```javascript
