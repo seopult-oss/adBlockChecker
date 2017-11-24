@@ -1,6 +1,6 @@
 {
   "name": "seopult-ad-block-checker",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Module for check AdBlockPlus",
   "main": "index.html",
   "dependencies": {},
