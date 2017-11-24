@@ -25,8 +25,11 @@
                     }
 
                     if (delay && self.isCheckerActive == undefined) {
-                        $interval(function () {
-                            self.isCheckerActive = adBlock.check();
+                        self.isCheckerActive = $interval(function () {
+                            try {
+                                 adBlock.check();
+                            } catch (e) {
+                            }
                         }, delay);
                     }
 
